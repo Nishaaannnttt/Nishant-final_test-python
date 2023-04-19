@@ -11,8 +11,11 @@ while True:
     if option==1:                     #first condition to add number and name
         x=input("Enter name: ")
         y=int(input("Enter your 10-digit phone number: "))
-        phoneDirectory.update({x:y})              # updates key value pair as input from user
-        print("Record added")
+        if len(str(y))==10:                            # works only when we gibve 10 numbers
+            phoneDirectory.update({x:y})              # updates key value pair as input from user
+            print("Record added")
+        else:
+            print('Please provide valid number ')  
         
         
     elif option==2:
@@ -27,8 +30,13 @@ while True:
         new_name=input("Enter name: ")
         if new_name in x:
             new_num=int(input("Enter the new 10-digit number: "))           # for new number asking 
+            if len(str(y))==10:                     # program works when we only input 10 int numbers 
+                phoneDirectory.update({x:y})              # updates key value pair as input from user
+                print("Record added")
+            else:
+                print('Please provide valid number ')         # when we give othern than 10 num
             
-            phoneDirectory[new_name]=new_num                               # updates new num in dict
+        phoneDirectory[new_name]=new_num                               # updates new num in dict
             
         print("Record updated")
         
