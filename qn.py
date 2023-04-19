@@ -31,7 +31,7 @@ while True:
             
                 print("{}:{}".format(name,phoneDirectory[name]))             # prints key value pair without braces and ""
         else:
-            print("The dictionary is empty")
+            print("The dictionary is empty. Nothing to search")
         
             
                 
@@ -56,7 +56,7 @@ while True:
                 del phoneDirectory[del_name]
             print("Record deleted")
         else:
-            print("The dictionary is empty. Nothing to search")                          # else it prints this
+            print("The dictionary is empty.")                          # else it prints this
         
     elif option==5:
         break                                                        # breaks the loop
